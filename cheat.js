@@ -66,3 +66,37 @@ function shiftItem() {
 	arrayRemove.shift();
 	document.getElementById("removeFromArray").innerHTML= "array = [" + arrayRemove + "]";
 }
+
+var colorIfElse = "";
+function displayColorIfElse() {
+	colorNumber = document.getElementById("colorNumber").value;
+	if (colorNumber == 0) {
+		colorIfElse = "black";
+	} else if (colorNumber == 1) {
+		colorIfElse = "brown";
+	} else if (colorNumber == 2) {
+		colorIfElse = "blonde";
+	} else if (colorNumber == 3) {
+		colorIfElse = "red";
+	}else {
+		colorIfElse = "not specified";
+	}
+	document.getElementById("colorIfElse").innerHTML= "Your hair color using if else is " + colorIfElse;
+}
+
+var colorSwitch = "";
+function displayColorSwitch() {
+	colorNumber = parseInt(document.getElementById("colorNumber").value);
+	switch(colorNumber) {
+		case 0: colorSwitch = "black";
+		break;
+		case 1: colorSwitch = "brown";
+		break;
+		case 2: colorSwitch = "blonde";
+		break;
+		case 3: colorSwitch = "red";
+		break;
+		default: colorSwitch = "not specified";
+	}
+	document.getElementById("colorSwitch").innerHTML= "Your hair color using switch is " + colorSwitch;
+}

@@ -6,7 +6,6 @@
 </head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
-<script src="cheat.js"></script>
 
 <body>
     <div class="container">
@@ -109,10 +108,56 @@
             <div class="col-md no-padding border-2 margin-10">
                 <h2 class="heading center">If Else vs Switch</h2>
                 <div class="padding-10">
+                    <h5>In this example we will use an if else statement to accomplish the same task as switch.  We want to determine a person's hair color based on the number entered:</h5>
+                    <p>0 = black &nbsp&nbsp 1 = brown &nbsp&nbsp 2 = blonde &nbsp&nbsp 3 = red</p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <h5>If Else Statement</h5>
+                            <br />
+                            <br />
+                            <p></p>
+                            <div>if (color == 0) {</div>
+                            <div>&nbsp&nbsp colorIfElse = "black";</div>
+                            <div>} else if (color == 1) {</div>
+                            <div>&nbsp&nbsp colorIfElse = "brown";</div>
+                            <div>} else if (color == 2) {</div>
+                            <div>&nbsp&nbsp colorIfElse = "blonde";</div>
+                            <div>} else if (color == 3) {</div>
+                            <div>&nbsp&nbsp colorIfElse = "red";</div>
+                            <div>} else {</div>
+                            <div>&nbsp&nbsp colorIfElse = "not specified"</div>
+                            <div>}</div>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Switch Case Statment</h5>
+                            <p>To use Switch Case below, colorNumber must be typeof number. Cases can be strings instead, "0".</p>
+                            <div>switch(colorNumber) {</div>
+                            <div>&nbsp&nbsp case 0: colorSwitch = "black";</div>
+                            <div>&nbsp&nbsp&nbsp&nbsp break;</div>
+                            <div>&nbsp&nbsp case 1: colorSwitch = "brown";</div>
+                            <div>&nbsp&nbsp&nbsp&nbsp break;</div>
+                            <div>&nbsp&nbsp case 2: colorSwitch = "blonde";</div>
+                            <div>&nbsp&nbsp&nbsp&nbsp break;</div>
+                            <div>&nbsp&nbsp case 3: colorSwitch = "red" ;</div>
+                            <div>&nbsp&nbsp&nbsp&nbsp break;</div>
+                            <div>&nbsp&nbsp default: colorSwitch = "not specified";</div>
+                            <div>}</div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row justify-content-center">
+                        <form>
+                            <input type="text" id="colorNumber" placeholder="Enter number for color" />
+                            <button type="button" onclick="displayColorIfElse()">If Else</button>
+                            <button type="button" onclick="displayColorSwitch()">Switch</button>
+                            <p id="colorIfElse"></p>
+                            <p id="colorSwitch"></p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <script src="cheat.js"></script>
 </body>
 
 </html>
