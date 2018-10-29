@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Cheat Sheet</title>
+</head>
+<script src="cheat.js"></script>
+<body>
+<h2>Access indexes in arrays</h2>
+<h4>Items in arrays are accessed by indexes.  The first item is located in index 0, the second in index 1, and so on.  Index 0 would be equal to 1, and index 1 would be equal to 2.</h4>
+<p>array = [1, 2, 3, 4, 5]</p>
+<h4>The index can be access by using the following code:</h4>
+<p>array[index number]</p>
+<h4>To access the value of "2" the code would be:</h4>
+<p>array[1]</p>
+
+<h3>Try It</h3>
+<form>
+<input type="text" id="index" placeholder="Enter index to retrieve" />
+<button type="button" onclick="displayIndex()">Submit</button>
+<p id="indexValue"></p>
+</form>
+
+<h2>Modify an array with indexes</h2>
+<p>array = [1, 2, 3, 4, 5]</p>
+<h4>An index in an array can be modified by declaring the index of an array and specifying its new value.</h4>
+<p>array[3] = 8</p>
+<h4>This will change the value of 4 to 8.</h4>
+<h3>Try It</h3>
+<form>
+<input type="text" id="indexToChange" placeholder="Enter index to change" />
+<input type="text" id="newValue" placeholder="Enter new value" />
+<button type="button" onclick="changeIndex()">Submit</button>
+<p id="newArray"></p>
+</form>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
