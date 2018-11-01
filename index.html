@@ -116,32 +116,32 @@
                             <br />
                             <br />
                             <p></p>
-                            <div>if (color == 0) {</div>
-                            <div>&nbsp&nbsp colorIfElse = "black";</div>
-                            <div>} else if (color == 1) {</div>
-                            <div>&nbsp&nbsp colorIfElse = "brown";</div>
-                            <div>} else if (color == 2) {</div>
-                            <div>&nbsp&nbsp colorIfElse = "blonde";</div>
-                            <div>} else if (color == 3) {</div>
-                            <div>&nbsp&nbsp colorIfElse = "red";</div>
-                            <div>} else {</div>
-                            <div>&nbsp&nbsp colorIfElse = "not specified"</div>
-                            <div>}</div>
+                            <pre>if (color == 0) {
+    colorIfElse = "black";
+} else if (color == 1) {
+    colorIfElse = "brown";
+} else if (color == 2) {
+    colorIfElse = "blonde";
+} else if (color == 3) {
+    colorIfElse = "red";
+} else {
+    colorIfElse = "not specified";
+}</pre>
                         </div>
                         <div class="col-md-4">
                             <h5>Switch Case Statment</h5>
                             <p>To use Switch Case below, colorNumber must be typeof number. Cases can be strings instead, "0".</p>
-                            <div>switch(colorNumber) {</div>
-                            <div>&nbsp&nbsp case 0: colorSwitch = "black";</div>
-                            <div>&nbsp&nbsp&nbsp&nbsp break;</div>
-                            <div>&nbsp&nbsp case 1: colorSwitch = "brown";</div>
-                            <div>&nbsp&nbsp&nbsp&nbsp break;</div>
-                            <div>&nbsp&nbsp case 2: colorSwitch = "blonde";</div>
-                            <div>&nbsp&nbsp&nbsp&nbsp break;</div>
-                            <div>&nbsp&nbsp case 3: colorSwitch = "red" ;</div>
-                            <div>&nbsp&nbsp&nbsp&nbsp break;</div>
-                            <div>&nbsp&nbsp default: colorSwitch = "not specified";</div>
-                            <div>}</div>
+                            <pre>switch(colorNumber) {
+    case 0: colorSwitch = "black";
+    break;
+    case 1: colorSwitch = "brown";
+    break;
+    case 2: colorSwitch = "blonde";
+    break;
+    case 3: colorSwitch = "red";
+    break;
+    default: colorSwitch = "not specified";
+    }</pre>
                         </div>
                     </div>
                     <br />
@@ -157,7 +157,157 @@
                 </div>
             </div>
         </div>
-        <script src="cheat.js"></script>
+        <div class="row">
+            <div class="col-md no-padding border-2 margin-10">
+                <h2 class="heading center">Do While Loop</h2>
+                <div class="padding-10">
+                    <h5>A Do While loop will ensure that the code inside the loop will execute at least once, since the while check is located at the end of the loop.  The Do While loop below will result in an array of [1].</h5>
+                    <pre>var array = [];
+i = 1;
+do {
+   array.push(i);
+   i++;
+} while (i <= 1);</pre>
+					<h3>Try It</h3>
+					<p>Input the first and last numbers in the array.</p>
+                    <form>
+					<input type="text" id="arrayStart" placeholder="First number" />
+					<input type="text" id="arrayEnd" placeholder="Last number" />
+                    <button type="button" onclick="doWhile()">Submit</button>
+                	</form>
+                	<p id="arrayFinal"></p>
+                </div>
+            </div>
+            <div class="col-md no-padding border-2 margin-10">
+                 <h2 class="heading center">Convert String to Integer</h2>
+                <div class="padding-10">
+                    <h5>parseInt() converts a string to an integer.</h5>
+                    <h5>To convert a string representing a base number into an integer, use the following.  The base can be between 2 and 35.</h5>
+                    <p>parseInt("string", base)</p>
+                </div>
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-md no-padding border-2 margin-10">
+               <h2 class="heading center">Generate Random Numbers</h2>
+                <div class="padding-10">
+                    <p>Math.random()</p>
+                    <h5>Math.random() will generate a random decimal number between 0 and 1 which includes 0 but not 1.</h5>
+                    <p>Math.floor()</p>
+                    <h5>Math.floor() will round the decimal down. </h5>
+                    <h5>Math.random() and Math.floor() can be combined to generate a whole number between 0 and a second number by nesting the functions and multiplying by a number.  Because Math.random() does not include the upper number, the number multiplied must be one above the desired upper value.  The function below will generate a number between 0 and 10.</h5>
+                    <p>Math.floor(Math.random() * 11)</p>
+                    <h5>A range can be specified by using the following.  The min and max values will be included.</h5>
+                    <p>Math.floor(Math.random() * (max - min + 1) ) + min</p>
+                    <h5>To generate a number between 2 and 5, the code will look like this:</h5>
+                    <p>Math.floor(Math.random() * (5 - 2 + 1) ) + 2</p>
+                    <p>Math.floor(Math.random() * 4) + 2</p>
+                    <h5>This will generate a number from a starting point of 2 and counting up until a total of 4 numbers is reached, so 2, 3, 4, 5.</h5>
+                </div>
+            </div>
+             <div class="col-md no-padding border-2 margin-10">
+                <h2 class="heading center">Conditional/Ternary Operator</h2>
+                <div class="padding-10">
+                    <h5>An if else statement can be written using the conditional/ternary operator.</h5>
+                    <pre>if (condition) {
+   return "statement if true";
+} else {
+   return "statement if false";
+}</pre>
+                    <pre>condition ? "statement if true" : "statement if false"</pre>
+                    <h5>The conditional/ternary operator can also be used for if / else if statements.</h5>
+                    <pre>if (condition1) {
+   return "statement if true";
+} else if (condition2) {
+   return "this statement if true";
+} else {
+   return "this statement all false";
+}</pre>
+ <pre>  condition1 ? "statement if true"
+: condition2 ? "this statement if true"
+: "this statement all false"</pre>
+                </div>
+            </div>
+        </div>
+       <div class="row">
+            <div class="col-md no-padding border-2 margin-10">
+                <h2 class="heading center">var vs let</h2>
+                <div class="padding-10">
+                    <h5>var allows declaring a variable more than once.  This is acceptable but causes a problem if this was not done intentially.</h5>
+                    <pre>var animal = "dog";
+var animal = "cat";</pre>
+                    <h5>ES6 introduces the variable "let".  If a let variable is declared more than once within the same scope, an error will be thrown in the console.log.</h5>
+                    <pre>let animal = "dog";
+let animal = "cat";</pre>
+                    <img id="error-msg" src="let-error.jpg" alt="error message" />
+                    <h5>However, the same let variable can be declared within different scopes without affecting the value of the variable outside of the scope it is declared.</h5>
+                    <pre>let animal = "dog";
+function animalType() {
+   let animal = "cat";
+   console.log("Animal inside function:", animal);
+}
+animalType();
+console.log("Animal outside function:", animal);</pre>
+<img id="animal-type" src="animal-type.jpg" alt="animal type snippet" />
+                </div>
+            </div>
+            <div class="col-md no-padding border-2 margin-10">
+                <h2 class="heading center">const vs let</h2>
+                <div class="padding-10">
+                    <h5>Once a let variable has been declared, it can be changed or reassigned.</h5>
+                    <pre>let animal = "dog";
+function animalType() {
+   let animal = "cat";
+   animal = "snake";
+   console.log("Animal inside function:", animal);
+}
+animalType();
+animal = "bird";
+console.log("Animal outside function:", animal);</pre>
+<img id="animal-type-let" src="animal-type-let.jpg" alt="let snippet" />
+                    <h5>const has the same features as let; however, once const has been declared, it cannot be reassigned. Good practice is to name constants in all CAPS.</h5>
+                    <pre>const PI = 3.14;
+PI = 5;</pre>
+<img id="change-pi" src="change-pi.jpg" alt="change pi snippet" />
+                    <h5>A const declared as an array or object can be changed.</h5>
+                    <pre>const ARRAY = [1,2,3,4,5];
+ARRAY[2] = 9;
+console.log(ARRAY);</pre>
+                    <img id="const-array" src="const-array.jpg" alt="const array snippet" />
+                    <h5>If you do not want an object to be altered, use this code after your object is declared:</h5>
+                    <pre>Object.freeze(OBJECTNAME);</pre>
+                </div>
+            </div>
+        </div>
+               <div class="row">
+            <div class="col-md no-padding border-2 margin-10">
+                <h2 class="heading center">ES6 Arrow Functions</h2>
+                <div class="padding-10">
+                    <h5>Functions with only a return value can be simplified from this:</h5>
+                    <pre>const myName = function() {
+   const name = "John";
+   return name;
+}</pre>
+                    <h5>to this:</h5>
+                    <pre>const myName = () => {
+   const name = "John";
+   return name;</pre>
+                    <h5>to this:</h5>
+                    <pre>const myName = () => "John";</pre>
+                </div>
+            </div>
+            <div class="col-md no-padding border-2 margin-10">
+                <h2 class="heading center">const vs let</h2>
+                <div class="padding-10">
+                    <h5></h5>
+                  filter()
+                  map()
+                  reduce()
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="cheat.js"></script>
 </body>
 
 </html>
