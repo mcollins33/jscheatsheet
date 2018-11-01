@@ -19,3 +19,12 @@
  	padding: 5px;
  	border-bottom: 2px solid black;
 }
+#error-msg {
+	width: 100%;
+}
+#change-pi {
+	width: 80%;
+}
+#animal-type, #animal-type-let, #const-array {
+	width: 40%;
+}
